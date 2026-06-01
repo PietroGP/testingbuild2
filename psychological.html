@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Redacted - Psychological Horror</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #0b0b0b; display: flex; justify-content: center; min-height: 100vh; }
+        .wrapper { position: relative; width: 100%; max-width: 1440px; }
+        .bg-screen { width: 100%; display: block; height: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
+        .nav-trigger { position: absolute; top: 0.4%; height: 1.2%; cursor: pointer; background: rgba(0,0,0,0); }
+        .btn-home { left: 42%; width: 5%; }
+        .btn-survival { left: 48%; width: 11%; }
+        .btn-suspense { left: 60%; width: 7%; }
+        .btn-psychological { left: 68%; width: 14%; }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="./psychological_horror/screen.png" alt="Psychological Horror" class="bg-screen">
+        <a href="./index.html" class="nav-trigger btn-home"></a>
+        <a href="./survival.html" class="nav-trigger btn-survival"></a>
+        <a href="./suspense.html" class="nav-trigger btn-suspense"></a>
+        <a href="./psychological.html" class="nav-trigger btn-psychological"></a>
+    </div>
+</body>
+</html>
