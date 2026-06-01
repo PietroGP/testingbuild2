@@ -3,72 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project: Redacted</title>
+    <title>Project: Redacted - Home</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background-color: #0b0b0b;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-        }
-        /* Container que segura a imagem e os botões juntos */
-        .container {
-            position: relative;
-            width: 100%;
-            max-width: 1200px; /* Alinha o tamanho ideal do design */
-        }
-        /* A imagem de fundo do seu design */
-        .background-image {
-            width: 100%;
-            display: block;
-            height: auto;
-        }
-        /* Estilo geral das caixas de clique invisíveis */
-        .invisible-btn {
-            position: absolute;
-            top: 0.5%;      /* Posiciona na linha do menu superior */
-            height: 1.5%;   /* Altura da área de clique */
-            cursor: pointer;
-            background: rgba(255, 0, 0, 0); /* Mude o 0 final para 0.3 se quiser ver as caixas piscando para testar */
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #0b0b0b; display: flex; justify-content: center; min-height: 100vh; overflow-x: hidden; }
+        .wrapper { position: relative; width: 100%; max-width: 1440px; }
+        .bg-screen { width: 100%; display: block; height: auto; image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
         
-        /* Posição horizontal exata de cada botão no menu (em % da tela) */
-        .btn-home {
-            left: 42%;
-            width: 5%;
-        }
-        .btn-survival {
-            left: 48%;
-            width: 11%;
-        }
-        .btn-suspense {
-            left: 60%;
-            width: 7%;
-        }
-        .btn-psychological {
-            left: 68%;
-            width: 14%;
-        }
+        /* Botões Invisíveis do Menu Superior */
+        .nav-trigger { position: absolute; top: 0.4%; height: 1.2%; cursor: pointer; background: rgba(0,0,0,0); }
+        .btn-home { left: 42%; width: 5%; }
+        .btn-survival { left: 48%; width: 11%; }
+        .btn-suspense { left: 60%; width: 7%; }
+        .btn-psychological { left: 68%; width: 14%; }
     </style>
 </head>
 <body>
-
-    <div class="container">
-        <!-- Carrega a imagem da página atual como fundo do protótipo -->
-        <img src="./home_the_evolution_of_fear/screen.png" alt="Interface" class="background-image">
-
-        <!-- Botões invisíveis posicionados por cima do menu da imagem -->
-        <a href="./home_the_evolution_of_fear/screen.png" class="invisible-btn btn-home" title="Home"></a>
-        <a href="./survival_horror/screen.png" class="invisible-btn btn-survival" title="Survival Horror"></a>
-        <a href="./suspense_atmospheric_horror/screen.png" class="invisible-btn btn-suspense" title="Suspense"></a>
-        <a href="./psychological_horror/screen.png" class="invisible-btn btn-psychological" title="Psychological Horror"></a>
+    <div class="wrapper">
+        <img src="./home_the_evolution_of_fear/screen.png" alt="Home" class="bg-screen">
+        
+        <!-- Agora eles apontam para páginas de site de verdade (.html) -->
+        <a href="./index.html" class="nav-trigger btn-home" title="Home"></a>
+        <a href="./survival.html" class="nav-trigger btn-survival" title="Survival Horror"></a>
+        <a href="./suspense.html" class="nav-trigger btn-suspense" title="Suspense"></a>
+        <a href="./psychological.html" class="nav-trigger btn-psychological" title="Psychological Horror"></a>
     </div>
-
 </body>
 </html>
